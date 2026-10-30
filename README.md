@@ -30,7 +30,7 @@ or SB2 HOTAS, you have it.
 
 1. Download `GearWithoutLevels-x.y.z.zip` from
    [Releases](https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels/releases/latest)
-   (or Nexus Mods).
+   or [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/7).
 2. Open your game folder (`...\SpaceBourne 2`, the one with `SpaceBourne2.exe`) and extract
    the zip **there**. It creates `SB2\Binaries\Win64\Mods\GearWithoutLevels` and switches
    itself on (`enabled.txt`).
