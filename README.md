@@ -69,17 +69,25 @@ exploit.
 
 ## Part of the SpaceBourne 2 realism set
 
-Separate, optional mods designed to work together:
-
-| Mod | |
-|---|---|
-| [Hardcore Tactical Realism](https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism) — realistic on-foot ballistics and tactical AI | released |
-| **Gear Without Levels** — this mod | released |
-| Split Controls | coming soon |
-| Silent Ops | coming soon |
-| Tactical Engineering | coming soon |
-| Faction Power | coming soon |
-| Tactical First Person | coming soon |
+- **Hardcore Tactical Realism (HTR)**, the on-foot combat overhaul:
+  [GitHub](https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism) ·
+  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/4) ·
+  [Steam discussion](https://steamcommunity.com/app/1646850/discussions/0/573805072991123580)
+- **SB2 HOTAS**, analog joystick and pedal flight:
+  [GitHub](https://github.com/hubertdungen/SpaceBourne2-HOTAS) ·
+  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/8)
+- **Split Controls**, separate ship and on-foot invert settings per device:
+  [GitHub](https://github.com/hubertdungen/SpaceBourne2-SplitControls) ·
+  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/5)
+- **Silent Ops**, stealth and takedowns:
+  [GitHub](https://github.com/hubertdungen/SpaceBourne2-SilentOps) ·
+  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/6)
+- **Gear Without Levels**: this mod
+- **Faction Power**, your faction gains power from dungeons, sales and missions:
+  [GitHub](https://github.com/hubertdungen/SpaceBourne2-FactionPower) ·
+  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/9)
+- Coming: **Tactical Engineering** (turrets), **Tactical First Person**.
+  One installer for the whole set is planned too.
 
 ## For modders
 
