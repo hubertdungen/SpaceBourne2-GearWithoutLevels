@@ -69,30 +69,28 @@ exploit.
 
 ## Part of the SpaceBourne 2 realism set
 
-- **Hardcore Tactical Realism (HTR)**, the on-foot combat overhaul:
-  [GitHub](https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism) ·
-  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/4) ·
-  [Steam discussion](https://steamcommunity.com/app/1646850/discussions/0/573805072991123580)
-- **SB2 HOTAS**, analog joystick and pedal flight:
-  [GitHub](https://github.com/hubertdungen/SpaceBourne2-HOTAS) ·
-  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/8)
-- **Split Controls**, separate ship and on-foot invert settings per device:
-  [GitHub](https://github.com/hubertdungen/SpaceBourne2-SplitControls) ·
-  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/5)
-- **Silent Ops**, stealth and takedowns:
-  [GitHub](https://github.com/hubertdungen/SpaceBourne2-SilentOps) ·
-  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/6)
-- **Gear Without Levels**: this mod
-- **Faction Power**, your faction gains power from dungeons, sales and missions:
-  [GitHub](https://github.com/hubertdungen/SpaceBourne2-FactionPower) ·
-  [Nexus Mods](https://www.nexusmods.com/spacebourne2/mods/9)
-- Coming: **Tactical Engineering** (turrets), **Tactical First Person**.
-  One installer for the whole set is planned too.
+This mod is part of the realism set, built around [Hardcore Tactical Realism](https://www.nexusmods.com/spacebourne2/mods/4) as the core mod. HTR is not required: this mod works on its own or with any of the others. **Install them all at once** with the [SpaceBourne 2 Realism installer](https://www.nexusmods.com/spacebourne2/mods/11) ([GitHub](https://github.com/hubertdungen/SpaceBourne2-Realism)): tick the mods you want, and it switches them on and keeps them up to date.
 
+- **Hardcore Tactical Realism (HTR)**: the core: realistic ballistics, wounds and tactical AI. [GitHub](https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/4) · [Steam](https://steamcommunity.com/app/1646850/discussions/0/573805072991123580/)
+- **Split Controls**: separate look inversion for ships and on foot. [GitHub](https://github.com/hubertdungen/SpaceBourne2-SplitControls) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/5)
+- **Silent Ops**: realistic stealth, suppressors and silent takedowns. [GitHub](https://github.com/hubertdungen/SpaceBourne2-SilentOps) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/6)
+- **Gear Without Levels** *(this mod)*: any weapon or suit at any level, with small penalties. [GitHub](https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/7)
+- **SB2 HOTAS**: joystick, HOTAS, pedals, head tracking and triple screen. [GitHub](https://github.com/hubertdungen/SpaceBourne2-HOTAS) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/8)
+- **Faction Power**: dungeons, sales and missions earn your faction power. [GitHub](https://github.com/hubertdungen/SpaceBourne2-FactionPower) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/9)
+- **Tactical Engineering**: deployable turrets and barricades that take time to set up. [GitHub](https://github.com/hubertdungen/SpaceBourne2-TacticalEngineering) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/10)
+- **Ammo Discipline**: realistic ammo limits and scavenging. [GitHub](https://github.com/hubertdungen/SpaceBourne2-AmmoDiscipline) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/12)
+- **Ground Waypoints**: planet waypoints on foot and on the hoverbike. [GitHub](https://github.com/hubertdungen/SpaceBourne2-GroundWaypoints) · [Nexus](https://www.nexusmods.com/spacebourne2/mods/13)
+
+Coming soon: Tactical First Person, Get Out of the Way.
+
+<!-- nexus:skip -->
 ## For modders
 
 - `scripts/gal/gamedefs.lua` holds every game-internal name; after a game update, that is the
   only file to check.
 - `docs/DESIGN.md` explains where the game enforces the level lock and how the mod works.
+<!-- /nexus:skip -->
+
+## License
 
 MIT licensed — see `LICENSE`. Uses [UE4SS](https://github.com/UE4SS-RE/RE-UE4SS) (MIT).
