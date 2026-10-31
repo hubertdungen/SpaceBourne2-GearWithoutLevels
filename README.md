@@ -24,7 +24,7 @@ if you remove it later.
 
 ## Install
 
-Needs **UE4SS** (the script loader most SpaceBourne 2 mods use). If you already play with
+Needs **UE4SS**, a free script loader for Unreal Engine games. If you already play with
 [Hardcore Tactical Realism](https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism)
 or SB2 HOTAS, you have it.
 
