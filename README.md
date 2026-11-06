@@ -44,7 +44,8 @@ or SB2 HOTAS, you have it.
 
 - **Shift+Delete** switches the mod on/off in game (remembered between sessions). The mod is
   **off** until you switch it on (or set `Enabled = true` in `scripts/config.lua`).
-- A short message on screen confirms the switch and tells you when you equip unfamiliar kit.
+- A short message on screen confirms the switch and tells you when you equip unfamiliar kit, for
+  example "Unfamiliar suit (L12, you L5): 18% worse until trained". It stays 6 seconds, without a beep.
 
 ## Settings (`scripts/config.lua`)
 

@@ -17,7 +17,7 @@
     gal/util.lua      helpers
 ]]
 
-local VERSION = "0.1.0"
+local VERSION = "0.1.1"
 
 local U = require("gal.util")
 local G = require("gal.gamedefs")
@@ -93,9 +93,10 @@ local function tell(item, pawn, what)
     if told[key] then return end
     told[key] = true
     local p = P.factor(lvl, you, PEN)
-    local text = string.format("Unfamiliar %s: L%d, you are L%d", what, math.floor(lvl), math.floor(you))
-    if p > 0 then text = text .. string.format(" - handling %d%% worse until you gain experience", math.floor(p * 100 + 0.5)) end
-    pcall(U.notify, text, pawn)
+    -- short, and held 6 s: the game's HUD line hides after 2 s and wraps long text in big letters
+    local text = string.format("Unfamiliar %s (L%d, you L%d)", what, math.floor(lvl), math.floor(you))
+    if p > 0 then text = text .. string.format(": %d%% worse until trained", math.floor(p * 100 + 0.5)) end
+    pcall(U.notify, text, pawn, 6)
 end
 
 -- 1. Level lock bypass (DESIGN 4.1) ----------------------------------------------
@@ -328,7 +329,7 @@ local function toggle()
     pcall(T.save)
     U.warn("Gear Without Levels " .. (on and "ON" or "OFF"))
     pcall(U.notify, on and "Gear Without Levels ON - over-level kit works, handles a bit worse"
-        or "Gear Without Levels OFF - vanilla level locks", pawn)
+        or "Gear Without Levels OFF - vanilla level locks", pawn, nil, true)
 end
 
 -- "Shift+Delete" -> Key.DEL with ModifierKey.SHIFT (shared key plan rev 2: Shift is the only

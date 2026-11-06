@@ -112,10 +112,13 @@ end
 
 -- HUD line, as in HTR 0.4.1 (both verified there): on foot the "No Target Nearby" style
 -- warning (TMWPerkWarning); elsewhere, e.g. in a ship, the red cursor warning line.
+-- On foot it goes through the set's shared gal/hudmsg.lua: no HUD beep, held long enough to read
+-- (hold, s), the same text at most once per 30 s (force: on/off switches).
 local MSG_LIB = "/Game/1Data/FunctionsMacros/Q1FunctionLibary.Default__Q1FunctionLibary_C"
-function U.notify(text, ctx)
+local HM = require("gal.hudmsg")
+function U.notify(text, ctx, hold, force)
     local p = U.playerPawn(ctx)
-    if U.valid(p) and pcall(function() p:TMWPerkWarning(FText(text)) end) then return true end
+    if U.valid(p) and U.shortClass(p) == "Q1_Character_C" then return HM.show(p, text, hold, force) end
     local lib = StaticFindObject(MSG_LIB)
     local wc = U.valid(p) and p or ctx
     if not (U.valid(lib) and U.valid(wc)) then return false end
