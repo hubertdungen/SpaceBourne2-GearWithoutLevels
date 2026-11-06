@@ -17,13 +17,14 @@
     gal/util.lua      helpers
 ]]
 
-local VERSION = "0.1.1"
+local VERSION = "0.1.2"
 
 local U = require("gal.util")
 local G = require("gal.gamedefs")
 local P = require("gal.penalty")
 local T = require("gal.training")
 local H = require("gal.hooks")
+local GT = require("gal.gametick") -- timed work on the game thread (0.1.2: no LoopAsync)
 
 -- Settings -------------------------------------------------------------------
 local okCfg, cfg = pcall(require, "config")
@@ -111,6 +112,7 @@ local function disarm() arm.n = 0 end
 -- it, other callers (contracts, the character) keep the real level.
 -- Q1FunctionLibary_C:GetPlayerLevel(Whom, __WorldContext, out Level)
 local function onGetPlayerLevel(_, whomP, ctxP, levelP)
+    GT.pump("menu") -- menus can pause the ALS tick; this keeps the UI hooks coming (one clock compare)
     if not on then return end
     if whomP:get() ~= 0 then return end -- pilot/ship levels: leave, and leave fast (hot in space combat)
     local ctx = ctxP:get()
@@ -307,17 +309,21 @@ H.add(G.Fn.PlayerTick, onTick, "suit stamina")
 -- window after the vanilla refill (DESIGN 5.1).
 
 local lastStatus, saveAt = "", os.clock() + 30
-LoopAsync(1000, function()
-    ExecuteInGameThread(function()
-        local now = os.clock()
-        local ok, err = pcall(H.poll, now)
-        if not ok then U.warn("poll: " .. tostring(err)) end
-        if now > saveAt then saveAt = now + 30; pcall(T.save) end -- training.txt, only when changed
-        local a, b = H.status()
-        local s = string.format("hooks active %d, waiting %d", a, b)
-        if s ~= lastStatus then lastStatus = s; U.log(s) end
-    end)
-    return false
+-- Once a second on the game thread, pumped by the ALS character tick on foot, the ship tick in a
+-- ship and GetPlayerLevel in menus (gametick.lua, 0.1.2). Until 0.1.1 this was LoopAsync +
+-- ExecuteInGameThread: called from UE4SS's async thread, ExecuteInGameThread writes a map all mods
+-- share without a lock, and two mods doing it at once crashed the game (UE4SS.dll+0x87c104).
+GT.log = function(msg) U.warn(msg) end
+GT.drive(GT.FOOT_TICK, "foot")
+GT.drive(GT.SHIP_TICK, "ship")
+GT.boot()
+GT.every(1.0, function(now)
+    local ok, err = pcall(H.poll, now)
+    if not ok then U.warn("poll: " .. tostring(err)) end
+    if now > saveAt then saveAt = now + 30; pcall(T.save) end -- training.txt, only when changed
+    local a, b = H.status()
+    local s = string.format("hooks active %d, waiting %d", a, b)
+    if s ~= lastStatus then lastStatus = s; U.log(s) end
 end)
 
 -- Toggle key --------------------------------------------------------------------
