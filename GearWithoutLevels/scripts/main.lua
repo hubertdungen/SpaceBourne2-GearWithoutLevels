@@ -309,13 +309,13 @@ H.add(G.Fn.PlayerTick, onTick, "suit stamina")
 -- window after the vanilla refill (DESIGN 5.1).
 
 local lastStatus, saveAt = "", os.clock() + 30
--- Once a second on the game thread, pumped by the ALS character tick on foot, the ship tick in a
--- ship and GetPlayerLevel in menus (gametick.lua, 0.1.2). Until 0.1.1 this was LoopAsync +
+-- Once a second on the game thread, pumped by the HUD draw (on foot and in a ship), the ALS
+-- character tick when the HUD is hidden and GetPlayerLevel in menus (gametick.lua, 0.1.2). Until 0.1.1 this was LoopAsync +
 -- ExecuteInGameThread: called from UE4SS's async thread, ExecuteInGameThread writes a map all mods
 -- share without a lock, and two mods doing it at once crashed the game (UE4SS.dll+0x87c104).
 GT.log = function(msg) U.warn(msg) end
+GT.drive(GT.HUD_TICK, "hud")
 GT.drive(GT.FOOT_TICK, "foot")
-GT.drive(GT.SHIP_TICK, "ship")
 GT.boot()
 GT.every(1.0, function(now)
     local ok, err = pcall(H.poll, now)
