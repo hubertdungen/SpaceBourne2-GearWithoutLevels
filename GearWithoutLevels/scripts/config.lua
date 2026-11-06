@@ -1,17 +1,15 @@
 --[[
   Gear Without Levels - user settings. Edit with any text editor, then restart the game.
-  Everything here is optional: delete a line and the default is used.
-
-  !! GROUNDWORK BUILD: nothing in this mod has been tested in game yet. !!
+    Everything here is optional: delete a line and the default is used.
 ]]
 
 return {
-    -- Master switch. OFF by default. Shift+Delete flips it in game, anywhere (remembered in
+    -- Master switch. ON by default. Shift+Delete flips it in game, anywhere (remembered in
     -- state.txt). Format: "Shift+<key>" or "<key>" with a UE4SS key name; "" = no key.
     -- Keep to Shift (on foot Ctrl opens the map, Alt crouches) and to keys the game leaves
     -- free everywhere (F7, F9, F11, Delete). Never F6/F8/F10 (quick save, quick load, bug
     -- report). Keys of the whole realistic set follow one shared key plan.
-    Enabled = false,
+        Enabled = true,
     ToggleKey = "Shift+Delete",
 
     Unlock = {

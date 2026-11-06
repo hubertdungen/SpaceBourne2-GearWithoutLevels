@@ -1,77 +1,111 @@
 [size=6][b]Gear Without Levels — for SpaceBourne 2[/b][/size]
 
-In SpaceBourne 2 a weapon or suit above your character level cannot be equipped ("High Level"). That is an MMO rule: a better rifle does not need a level. What a rookie lacks is familiarity with advanced kit.
+In SpaceBourne 2 a weapon or suit above your character level cannot be equipped ("High Level"). That is an MMO rule: a better rifle does not need a level. What a rookie lacks is familiarity with advanced kit. [b]Gear Without Levels[/b] removes the level lock for weapons, melee weapons and suits. Kit above your level always works, but handles a little worse until you have the experience for it.
 
-[b]Gear Without Levels[/b] removes the level lock for weapons, melee weapons and suits. Kit above your level always works, but handles a little worse until you have the experience for it:
+[b]Links:[/b] [url=https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/7]Nexus Mods[/url] · UE4SS Lua mod · works alone or with [url=https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism]Hardcore Tactical Realism[/url] and the rest of the realism set.
+[b]Install the whole realism set in one go:[/b] the [url=https://github.com/hubertdungen/SpaceBourne2-Realism]SpaceBourne 2 Realism installer[/url] ([url=https://www.nexusmods.com/spacebourne2/mods/11]Nexus[/url]).
+
+[line]
+[size=5][b]Features[/b][/size]
+
+[size=4][b]No level lock[/b][/size]
 
 [list]
-[*]firearms kick a bit more per shot (up to +40 %);
-[*]melee weapons cost a bit more stamina per swing (up to +25 %);
-[*]an advanced suit tires you a bit faster when sprinting or swinging (up to +20 %).
+[*][b]Equip anything.[/b] Weapons, melee weapons and suits above your level can be equipped from the inventory, the character screen and the shops.
+[*][b]Nothing else changes.[/b] Damage, protection and rate of fire are [b]never[/b] changed. The mod changes no items and nothing in your saves. Gear you equipped with it stays equipped if you remove it later.
 [/list]
 
-The penalty depends on how far above you the item is, on a log scale: an item at twice your level gives about half of it, the ±2 levels of normal loot give almost nothing, and a veteran adapts faster than a rookie. [b]Training[/b] helps too: rounds fired with a gun, swings with a blade and exertion in a suit make you familiar with that item and remove up to three quarters of its penalty before you level up. Damage, protection and rate of fire are [b]never[/b] changed.
+[size=4][b]Small handling penalties[/b][/size]
 
-The mod changes no items and nothing in your saves. Gear you equipped with it stays equipped if you remove it later.
+[list]
+[*][b]Firearms kick a bit more[/b] per shot (up to +40 %).
+[*][b]Melee weapons cost a bit more stamina[/b] per swing (up to +25 %).
+[*][b]An advanced suit tires you a bit faster[/b] when sprinting or swinging (up to +20 %).
+[*][b]On a log scale.[/b] The penalty depends on how far above you the item is: an item at twice your level gives about half of it, the ±2 levels of normal loot give almost nothing, and a veteran adapts faster than a rookie.
+[*][b]A short line tells you.[/b] When you equip unfamiliar kit, the HUD shows for example "Unfamiliar suit (L12, you L5): 18% worse until trained", for 6 seconds, without a beep.
+[/list]
+
+[size=4][b]Training[/b][/size]
+
+[list]
+[*][b]Use it and you learn it.[/b] Rounds fired with a gun, swings with a blade and exertion in a suit make you familiar with that item and remove up to three quarters of its penalty before you level up.
+[/list]
+
+[size=4][b]With Hardcore Tactical Realism[/b][/size]
+
+[list]
+[*]Built as a companion to [b]Hardcore Tactical Realism (HTR)[/b], where damage depends on calibre, armor and hit zone instead of item level. With HTR's optional gear bonus (F8) on, an over-level weapon still gives its small HTR bonus (up to +8 penetration, +15 % damage at level 60), so the result is a [b]minor bonus with a small handling cost[/b].
+[*]Without HTR, vanilla weapon damage grows a lot with item level (×3.7 from level 10 to 40), so this mod caps an over-level gun to the damage of a gun 5 levels above you. It never becomes an exploit.
+[/list]
+
+[size=4][b]On by default[/b][/size]
+
+[list]
+[*]On as soon as it is installed. [b]Shift+Delete[/b] switches it off and on in game; your choice is remembered between sessions.
+[/list]
 
 [line]
 [size=5][b]Install[/b][/size]
 
-Needs [b]UE4SS[/b], a free script loader for Unreal Engine games. If you already play with [url=https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism]Hardcore Tactical Realism[/url] or SB2 HOTAS, you have it.
+[b]A. SpaceBourne 2 Realism installer (recommended)[/b] Get it on [url=https://www.nexusmods.com/spacebourne2/mods/11]Nexus[/url] or [url=https://github.com/hubertdungen/SpaceBourne2-Realism/releases/latest]GitHub[/url]. Tick Gear Without Levels and any other mods of the set: it installs UE4SS if you don't have it, switches the mods on and keeps them updated.
 
+[b]B. Manual[/b] (Nexus file, or the zip on the [url=https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels/releases]releases page[/url])
 [list=1]
-[*]Download GearWithoutLevels-x.y.z.zip from [url=https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels/releases/latest]Releases[/url] or [url=https://www.nexusmods.com/spacebourne2/mods/7]Nexus Mods[/url].
-[*]Open your game folder (...\SpaceBourne 2, the one with SpaceBourne2.exe) and extract the zip [b]there[/b]. It creates SB2\Binaries\Win64\Mods\GearWithoutLevels and switches itself on (enabled.txt).
+[*]Extract the zip into your game folder (...\SpaceBourne 2, the one with SpaceBourne2.exe). It creates SB2\Binaries\Win64\Mods\GearWithoutLevels and switches itself on.
 [*]No UE4SS yet? Get [url=https://github.com/UE4SS-RE/RE-UE4SS/releases/tag/v3.0.1]RE-UE4SS 3.0.1[/url] and copy dwmapi.dll, UE4SS.dll and UE4SS-settings.ini into SpaceBourne 2\SB2\Binaries\Win64\.
 [/list]
 
-[b]Uninstall:[/b] delete the GearWithoutLevels folder.
+[b]Uninstall:[/b] untick Gear Without Levels in the installer or delete the GearWithoutLevels folder.
 
 [line]
 [size=5][b]Controls[/b][/size]
 
 [list]
-[*][b]Shift+Delete[/b] switches the mod on/off in game (remembered between sessions). The mod is [b]off[/b] until you switch it on (or set Enabled = true in scripts/config.lua).
-[*]A short message on screen confirms the switch and tells you when you equip unfamiliar kit, for example "Unfamiliar suit (L12, you L5): 18% worse until trained". It stays 6 seconds, without a beep.
+[*][b]Shift+Delete[/b] switches the mod on/off in game (remembered between sessions).
 [/list]
 
 [line]
 [size=5][b]Settings (scripts/config.lua)[/b][/size]
 
 [list]
+[*]Enabled — false keeps it off until you switch it on with the key.
 [*]Penalty — strength per kit type (recoil, melee stamina, suit stamina) and how fast the penalty grows with the level gap.
 [*]Training — rounds, swings and stamina bars for full familiarity; how much training can remove (default 75 %).
 [*]Unlock.PickLists — show over-level items in the character screen's item picker.
 [*]Unlock.ShopShowsAllLevels — make the shop's "show unusable" filter treat every item as usable.
-[*]Standalone.DamageCapLevels — used only without Hardcore Tactical Realism (below).
+[*]Standalone.DamageCapLevels — used only without Hardcore Tactical Realism (see above).
 [/list]
 
 [line]
-[size=5][b]With Hardcore Tactical Realism[/b][/size]
-
-Built as a companion to [b]Hardcore Tactical Realism (HTR)[/b], where damage depends on calibre, armor and hit zone instead of item level. With HTR's optional gear bonus (F8) on, an over-level weapon still gives its small HTR bonus (up to +8 penetration, +15 % damage at level 60), so the result is a [b]minor bonus with a small handling cost[/b].
-
-Without HTR, vanilla weapon damage grows a lot with item level (×3.7 from level 10 to 40), so this mod caps an over-level gun to the damage of a gun 5 levels above you. It never becomes an exploit.
-
-[line]
-[size=5][b]Part of the SpaceBourne 2 realism set[/b][/size]
-
-This mod is part of the realism set, built around [url=https://www.nexusmods.com/spacebourne2/mods/4]Hardcore Tactical Realism[/url] as the core mod. HTR is not required: this mod works on its own or with any of the others. [b]Install them all at once[/b] with the [url=https://www.nexusmods.com/spacebourne2/mods/11]SpaceBourne 2 Realism installer[/url] ([url=https://github.com/hubertdungen/SpaceBourne2-Realism]GitHub[/url]): tick the mods you want, and it switches them on and keeps them up to date.
+[size=5][b]For modders[/b][/size]
 
 [list]
-[*][b]Hardcore Tactical Realism (HTR)[/b]: the core: realistic ballistics, wounds and tactical AI. [url=https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/4]Nexus[/url] · [url=https://steamcommunity.com/app/1646850/discussions/0/573805072991123580/]Steam[/url]
-[*][b]Split Controls[/b]: separate look inversion for ships and on foot. [url=https://github.com/hubertdungen/SpaceBourne2-SplitControls]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/5]Nexus[/url]
-[*][b]Silent Ops[/b]: realistic stealth, suppressors and silent takedowns. [url=https://github.com/hubertdungen/SpaceBourne2-SilentOps]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/6]Nexus[/url]
-[*][b]Gear Without Levels[/b] [i](this mod)[/i]: any weapon or suit at any level, with small penalties. [url=https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/7]Nexus[/url]
-[*][b]SB2 HOTAS[/b]: joystick, HOTAS, pedals, head tracking and triple screen. [url=https://github.com/hubertdungen/SpaceBourne2-HOTAS]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/8]Nexus[/url]
-[*][b]Faction Power[/b]: dungeons, sales and missions earn your faction power. [url=https://github.com/hubertdungen/SpaceBourne2-FactionPower]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/9]Nexus[/url]
-[*][b]Tactical Engineering[/b]: deployable turrets and barricades that take time to set up. [url=https://github.com/hubertdungen/SpaceBourne2-TacticalEngineering]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/10]Nexus[/url]
-[*][b]Ammo Discipline[/b]: realistic ammo limits and scavenging. [url=https://github.com/hubertdungen/SpaceBourne2-AmmoDiscipline]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/12]Nexus[/url]
-[*][b]Ground Waypoints[/b]: planet waypoints on foot and on the hoverbike. [url=https://github.com/hubertdungen/SpaceBourne2-GroundWaypoints]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/13]Nexus[/url]
-[*][b]Get Out of the Way[/b]: NPCs step aside naturally when you walk through them. [url=https://github.com/hubertdungen/SpaceBourne2-GetOutOfTheWay]GitHub[/url] · [url=https://www.nexusmods.com/spacebourne2/mods/14]Nexus[/url]
+[*]scripts/gal/gamedefs.lua holds every game-internal name; after a game update, that is the only file to check.
+[*][url=https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels/blob/main/docs/DESIGN.md]DESIGN.md[/url] explains where the game enforces the level lock and how the mod works.
 [/list]
 
-Coming soon: Tactical First Person.
+Version history: [url=https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels/blob/main/CHANGELOG.md]CHANGELOG.md[/url].
+
+[line]
+[size=5][b]The SpaceBourne 2 realism set[/b][/size]
+
+Separate mods that work alone or in any combination. The [url=https://github.com/hubertdungen/SpaceBourne2-Realism]SpaceBourne 2 Realism installer[/url] ([url=https://www.nexusmods.com/spacebourne2/mods/11]Nexus[/url]) installs the ones you tick and keeps them updated.
+
+[list]
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-HardcoreTacticalRealism]Hardcore Tactical Realism[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/4]Nexus[/url]): realistic ballistics, wounds and tactical AI. The core of the set.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-SilentOps]Silent Ops[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/6]Nexus[/url]): stealth, silent takedowns and suppressors.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-AmmoDiscipline]Ammo Discipline[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/12]Nexus[/url]): carried ammo limits and scavenging, so every magazine counts.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-GearWithoutLevels]Gear Without Levels[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/7]Nexus[/url]): use gear above your level, with small handling penalties.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-TacticalFirstPerson]Tactical First Person[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/15]Nexus[/url]): first person on foot, weapons held up, aiming down the sights.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-TacticalEngineering]Tactical Engineering[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/10]Nexus[/url]): realistic deployable turrets.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-GetOutOfTheWay]Get Out of the Way[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/14]Nexus[/url]): NPCs step aside naturally when you walk through them.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-GroundWaypoints]Ground Waypoints[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/13]Nexus[/url]): planet waypoints on foot and on the hoverbike.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-FactionPower]Faction Power[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/9]Nexus[/url]): dungeons, strategic sales and missions earn your faction power.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-BiggerArmies]Bigger Armies[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/17]Nexus[/url]): twice the general slots for your faction's ground and space forces.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-ClearHUD]Clear HUD[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/16]Nexus[/url]): a reticle you can see and HUD colours of your choice.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-SplitControls]Split Controls[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/5]Nexus[/url]): separate vertical invert for ship and on foot, per device.
+[*][b][url=https://github.com/hubertdungen/SpaceBourne2-HOTAS]SB2 HOTAS[/url][/b] ([url=https://www.nexusmods.com/spacebourne2/mods/8]Nexus[/url]): HOTAS, rudder pedals, triple screens and head tracking.
+[/list]
 
 [line]
 [size=5][b]License[/b][/size]

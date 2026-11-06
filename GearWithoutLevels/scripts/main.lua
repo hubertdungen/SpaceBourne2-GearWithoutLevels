@@ -6,7 +6,7 @@
   In-game test 2026-10-30 (build of 2026-10-26, UE4SS 3.0.1, with HTR): level override on the
   lock widgets, equipping over-level suits and weapons through the real inventory, recoil,
   suit stamina, training count and frame times verified. Melee and the standalone damage cap:
-  not tested. Off by default (config.lua).
+  not tested. On by default (config.lua).
 
   Layout (same as Hardcore Tactical Realism):
     config.lua        user settings
@@ -36,7 +36,7 @@ local function section(name, defaults)
     if type(cfg[name]) ~= "table" then cfg[name] = {} end
     for k, v in pairs(defaults) do if cfg[name][k] == nil then cfg[name][k] = v end end
 end
-if cfg.Enabled == nil then cfg.Enabled = false end
+if cfg.Enabled == nil then cfg.Enabled = true end
 if cfg.ToggleKey == nil then cfg.ToggleKey = "Shift+Delete" end -- shared key plan rev 2 (laptop-safe)
 if cfg.Notify == nil then cfg.Notify = true end
 section("Unlock", { PickLists = true, ShopShowsAllLevels = false })
