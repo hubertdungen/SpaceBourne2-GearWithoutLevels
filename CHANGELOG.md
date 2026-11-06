@@ -7,7 +7,8 @@
   the set did that at the same moment, UE4SS's own bookkeeping broke and the game crashed. All of it
   now runs on the game's own thread, driven by the game's tick on foot, in your ship and in menus
   (the same fix in every mod of the realism set).
-- Not tested in game yet.
+- Tested in game with the whole realism set (13 mods together, a few minutes on foot): no crash,
+  and every mod's timed work ran.
 
 ## 0.1.1 — 2026-11-06
 
